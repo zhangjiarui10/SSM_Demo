@@ -20,4 +20,9 @@ public class UserServiceImpl implements IUserService {
     public List<User> findAll() throws Exception {
         return userDao.findAll();
     }
+
+    @Override
+    public void save(User user) {
+        userDao.save(user);
+    }
 }

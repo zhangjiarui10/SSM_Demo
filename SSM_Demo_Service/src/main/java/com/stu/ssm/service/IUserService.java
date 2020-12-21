@@ -7,4 +7,6 @@ import java.util.List;
 public interface IUserService {
 
     List<User> findAll() throws Exception;
+
+    void save(User user);
 }

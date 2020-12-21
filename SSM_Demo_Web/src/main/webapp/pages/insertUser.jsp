@@ -23,26 +23,26 @@
     <script src="../js/bootstrap.min.js"></script>
 </head>
 <body>
-    <form action="${pageContext.request.contextPath}/user/save.do">
+    <form action="${pageContext.request.contextPath}/user/save.do" method="get">
         <div class="form-group">
             <label for="userId">编号</label>
-            <input type="text" class="form-control" id="userId" placeholder="ID">
+            <input type="text" class="form-control" id="userId" placeholder="Id" name="userId">
         </div>
         <div class="form-group">
             <label for="userName">姓名</label>
-            <input type="text" class="form-control" id="userName" placeholder="Name">
+            <input type="text" class="form-control" id="userName" placeholder="Name"name="userName">
         </div>
         <div class="form-group">
             <label for="userAge">年龄</label>
-            <input type="text" class="form-control" id="userAge" placeholder="Age">
+            <input type="text" class="form-control" id="userAge" placeholder="Age" name="userAge">
         </div>
         <div class="form-group">
             <label for="userClass">班级</label>
-            <input type="text" class="form-control" id="userClass" placeholder="Class">
+            <input type="text" class="form-control" id="userClass" placeholder="Class" name="userClass">
         </div>
             <div class="form-group">
             <label for="userHome">家乡</label>
-            <input type="text" class="form-control" id="userHome" placeholder="Home">
+            <input type="text" class="form-control" id="userHome" placeholder="Home" name="userHome">
         </div>
         <button type="submit" class="btn btn-default">Submit</button>
     </form>
