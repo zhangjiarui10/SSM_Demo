@@ -23,7 +23,7 @@
     <script src="../js/bootstrap.min.js"></script>
 </head>
 <body>
-    <form action="${pageContext.request.contextPath}/relation/update.do" method="post">
+    <form action="${pageContext.request.contextPath}/relation/save.do" method="post">
         <div class="form-group">
             <label for="userId">借阅者ID</label>
             <input type="text" class="form-control" id="userId" placeholder="userId" name="userId">
@@ -33,8 +33,8 @@
             <input type="text" class="form-control" id="bookId" placeholder="bookId"name="bookId">
         </div>
         <div class="form-group">
-            <label for="useName">借阅者姓名</label>
-            <input type="text" class="form-control" id="useName" placeholder="useName" name="useName">
+            <label for="userName">借阅者姓名</label>
+            <input type="text" class="form-control" id="userName" placeholder="userName" name="userName">
         </div>
         <div class="form-group">
             <label for="bookName">书名</label>
