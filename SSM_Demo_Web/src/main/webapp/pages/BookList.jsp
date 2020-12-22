@@ -26,22 +26,28 @@
     <table class="table">
         <tr>
             <td>序号</td>
-            <td>姓名</td>
-            <td>年龄</td>
-            <td>班级</td>
-            <td>家乡</td>
+            <td>书名</td>
+            <td>类别</td>
+            <td>出版年份</td>
             <td>操作</td>
         </tr>
-        <c:forEach items="${userList}" var="user">
+        <c:forEach items="${bookList}" var="book">
             <tr>
-                <td>${user.userId}</td>
-                <td>${user.userName}</td>
-                <td>${user.userAge}</td>
-                <td>${user.userClass}</td>
-                <td>${user.userHome}</td>
-                <td><a href="${pageContext.request.contextPath}/user/delete.do">删除</a></td>
+                <td>${book.bookId}</td>
+                <td>${book.bookName}</td>
+                <td>${book.bookKind}</td>
+                <td>${book.bookBrith}</td>
+                <td>
+                    <a href="${pageContext.request.contextPath}/book/delete.do?bookId=${book.bookId}">删除</a>
+                    <a href="${pageContext.request.contextPath}/pages/updateBook.jsp?bookId=${book.bookId}">修改</a>
+                </td>
             </tr>
         </c:forEach>
     </table>
+    <button type="button" class="btn btn-default btn-lg btn-block">
+        <a href="${pageContext.request.contextPath}/pages/insertBook.jsp">
+            添加
+        </a>
+    </button>
 </body>
 </html>

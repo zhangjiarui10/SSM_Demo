@@ -12,7 +12,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-    <title>Bootstrap 101 Template</title>
+    <title>Main Page！！！</title>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -25,8 +25,8 @@
 <div class="center-block">
     <div class="btn-group" role="group" aria-label="...">
         <a type="button" class="btn btn-default" href="${pageContext.request.contextPath}/user/findAll.do">查看用户</a>
-        <a type="button" class="btn btn-default">查看图书</a>
-        <a type="button" class="btn btn-default">查看借阅关系</a>
+        <a type="button" class="btn btn-default" href="${pageContext.request.contextPath}/book/findAll.do">查看图书</a>
+        <a type="button" class="btn btn-default" href="${pageContext.request.contextPath}/relation/findAll.do">查看借阅关系</a>
     </div>
 </div>
 </body>
