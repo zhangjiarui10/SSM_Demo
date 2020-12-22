@@ -39,7 +39,10 @@
                 <td>${user.userAge}</td>
                 <td>${user.userClass}</td>
                 <td>${user.userHome}</td>
-                <td><a href="${pageContext.request.contextPath}/user/delete.do">删除</a></td>
+                <td>
+                    <a href="${pageContext.request.contextPath}/user/delete.do?userId=${user.userId}">删除</a>
+                    <a href="${pageContext.request.contextPath}/pages/updateUser.jsp?userId=${user.userId}">修改</a>
+                </td>
             </tr>
         </c:forEach>
     </table>

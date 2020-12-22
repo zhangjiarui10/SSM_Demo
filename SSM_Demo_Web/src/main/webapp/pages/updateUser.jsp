@@ -13,7 +13,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-    <title>insert</title>
+    <title>update</title>
 
     <!-- Bootstrap -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
@@ -23,10 +23,10 @@
     <script src="../js/bootstrap.min.js"></script>
 </head>
 <body>
-    <form action="${pageContext.request.contextPath}/user/save.do" method="post" accept-charset="UTF-8">
+    <form action="${pageContext.request.contextPath}/user/update.do" method="post">
         <div class="form-group">
             <label for="userId">编号</label>
-            <input type="text" class="form-control" id="userId" placeholder="Id" name="userId">
+            <input type="text" class="form-control" id="userId" placeholder="Id" name="userId" value="<%=request.getParameter("userId")%>" readonly>
         </div>
         <div class="form-group">
             <label for="userName">姓名</label>

@@ -18,12 +18,30 @@ public class UserController {
     @Autowired
     public IUserService userService;
 
+    @RequestMapping("update.do")
+    public String update(User user){
+        userService.update(user);
+        return "redirect:findAll.do";
+    }
+
+    /**
+     * 用户删除
+     * @param userId
+     * @return
+     */
+    @RequestMapping("delete.do")
+    public String delete(int userId){
+        userService.delete(userId);
+        return "redirect:findAll.do";
+    }
+
     /**
      * 产品添加
      * @param user
      */
-    @RequestMapping("/save.do")
+    @RequestMapping(value = "/save.do", produces = "text/plain;charset=UTF-8")
     public String save(User user){
+        System.out.println(user);
         userService.save(user);
         return "redirect:findAll.do";
     }
@@ -39,9 +57,9 @@ public class UserController {
         System.out.println("controller!!!!");
 
         List<User> us = userService.findAll();
-        for (User u: us) {
-            System.out.println(u);
-        }
+//        for (User u: us) {
+//            System.out.println(u);
+//        }
         mv.addObject("userList",us);
         mv.setViewName("UserList");
         return mv;

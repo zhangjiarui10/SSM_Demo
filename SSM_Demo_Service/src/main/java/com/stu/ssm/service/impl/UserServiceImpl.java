@@ -25,4 +25,14 @@ public class UserServiceImpl implements IUserService {
     public void save(User user) {
         userDao.save(user);
     }
+
+    @Override
+    public void delete(int userId) {
+        userDao.delete(userId);
+    }
+
+    @Override
+    public void update(User user) {
+        userDao.update(user);
+    }
 }
