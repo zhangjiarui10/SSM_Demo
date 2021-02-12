@@ -23,24 +23,24 @@
     <script src="../js/bootstrap.min.js"></script>
 </head>
 <body>
-    <form action="${pageContext.request.contextPath}/relation/update.do" method="post">
+    <form action="${pageContext.request.contextPath}/book/save.do" method="post">
         <div class="form-group">
-            <label for="userId">借阅者ID</label>
-            <input type="text" class="form-control" id="userId" placeholder="userId" name="userId">
-        </div>
-        <div class="form-group">
-            <label for="bookId">图书ID</label>
-            <input type="text" class="form-control" id="bookId" placeholder="bookId"name="bookId">
-        </div>
-        <div class="form-group">
-            <label for="useName">借阅者姓名</label>
-            <input type="text" class="form-control" id="useName" placeholder="useName" name="useName">
+            <label for="bookId">编号</label>
+            <input type="text" class="form-control" id="bookId" placeholder="Id" name="bookId">
         </div>
         <div class="form-group">
             <label for="bookName">书名</label>
-            <input type="text" class="form-control" id="bookName" placeholder="bookName" name="bookName">
+            <input type="text" class="form-control" id="bookName" placeholder="Name" name="bookName">
         </div>
-        <button type="submit" class="btn btn-default">Submit</button>
+        <div class="form-group">
+            <label for="bookKind">类别</label>
+            <input type="text" class="form-control" id="bookKind" placeholder="Kind" name="bookKind">
+        </div>
+        <div class="form-group">
+            <label for="bookBrith">出版年份</label>
+            <input type="text" class="form-control" id="bookBrith" placeholder="Year" name="bookBrith">
+            <button type="submit" class="btn btn-default">Submit</button>
+        </div>
     </form>
 </body>
 </html>
